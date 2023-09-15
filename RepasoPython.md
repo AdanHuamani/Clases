@@ -93,4 +93,57 @@ Alumnos={
 }
 ```
 
-## 5. FUNCIONES
+## 5. CONTROLES DE FLUJO: 
+### DECISIONES: 
+Solo se ejecuta el codigo si la condicion es verdadera. Podemos hacer que si la condicion sea falsa se ejecute otro codigo.
+#### Sintaxis:
+Primerpoc especificar el codigo que se ejecutara si cumple una condicion.
+```python
+if <condicion>
+```
+El cidigo que deseamos ejecutar si la condicion es verdad.
+```python
+   print("Ejecuta esto")
+   ```
+Aquí estamos fuera del if o del si este codigo siempre se ejecutara no depende del if.
+```python
+print("esto siempre se ejecutara")
+```
+Si queremos que se ejecute otro codigo en caso sea falso.
+```python
+if <condicion falsa>:
+    print("solo emprime si es verdad")
+else
+    print("solo imprime si es falso")
+```
+Ejemplitos:
+```Python
+if 15>18
+    print("solo imprime si es verdad")
+else:
+    print("solo imprime si es falso")
+```
+```python
+if 15*2==30:
+    print("imprime esto si es verdad")
+else:
+    print("imprime esto si es falso")
+```
+```python
+if condicion=true
+    print("imprime esto si es verdad")
+else: 
+    print("imprime esto si es falso")
+```
+### CICLOS: 
+#### Existen dos tipos de ciclos:
+- Cuando sabes la cantidad de veces que vamos a repetir.
+  - para este caso existe el for.
+  - sentaxis despues de la palabra reservada for debemos crear una variable que almacene el numero que iremos iterando.
+  - Luego tendremos que indicar el rango a iterar a los elementos.
+```python
+  vocales=[a,e,i,o,u]
+  for i in vocales:
+    print(i)
+  ```
+- Cuando no sabemos la cantidad de veces a repetir.
