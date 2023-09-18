@@ -146,4 +146,14 @@ else:
   for i in vocales:
     print(i)
   ```
-- Cuando no sabemos la cantidad de veces a repetir.
+- Cuando no sabemos la cantidad de veces a repetir. para eso usamos while.
+  - **while:** todas las condiciones que son verdaderas van a permitir que el codigo se ejecute, evalua si la condicion es verdadera (es un ciclo infinito).
+  ```python
+  condicion = true
+  while condicion 
+    print ("hola")
+    texto=input("ingresa tu nombre o salir para terminar el programa:")
+    if texto=="salir"
+        condicion=false    
+  ```
+  - for: Sabe la cantidad de veces que se va ejecutar el ciclo en el programa.
