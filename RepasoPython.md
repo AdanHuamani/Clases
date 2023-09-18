@@ -157,3 +157,27 @@ else:
         condicion=false    
   ```
   - for: Sabe la cantidad de veces que se va ejecutar el ciclo en el programa.
+## FUNCIONES:
+Existen 2 tipos de funciones.
+1. Funciones propias del lenguaje: Que ya vienen creadas e insertadas en python y estan listas para ser usadas.
+   
+   Estructura de uso de una funcion:
+   Tiene nombre seguido de parentesis ( ), dentro de las parentisis podremos pasarle que nesecita la funcion para ejecutarse.
+   Esta es una funcion que nos sirve para mostrar datos por consola.
+
+     ### **Print:**
+    Esta es una funbcion que nos sirve para mostrar el dato por consola.
+    ```python
+    print("Hola Chamo")
+    ```
+    ### **Len:** 
+    Esta funcion nos permite saber la longitud de una lista o un string.
+    ```python
+    print(len([7,1,10,17]))
+    ```
+    ### **Input:** 
+    Es una funcion que se detiene a esperar que el usuario. entre parentisis podremos escribir un mensaje que indique que accion realizara el usuario.
+    ```python
+    input("Ingresa tu nombre")
+    ```
+2. Funciones creadas: 
