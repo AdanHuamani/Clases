@@ -21,15 +21,15 @@
 
 ## 3. Crear un programa que me pida 5 veces un nombre y por cada ves 
 # que lo pida muestre la cantidad de veces que ingreso el nombre.
-# nombre_ = {}
-# for a in range(5):
-#     nombre = input("Ingresa un nombre: ")
-#     if nombre in nombre_:
-#         nombre_[nombre] += 1
-#     else:
-#         nombre_[nombre] = 1
-# for nombre, cantidad in nombre_.items():
-#     print(f"El nombre {nombre} fue ingresado {cantidad} veces.")
+nombre_ = {}
+for a in range(5):
+    nombre = input("Ingresa un nombre: ")
+    if nombre in nombre_:
+        nombre_[nombre] += 1
+    else:
+        nombre_[nombre] = 1
+for nombre, cantidad in nombre_.items():
+    print(f"El nombre {nombre} fue ingresado {cantidad} veces.")
 ## 4. Crear un programa que me pida un numero y lo evalue con el 
 # numero premiado, si el numero ingresado es el premiado el programa finaliza,
 # si el numero ingresado es incorrecto el programa seguirá pidiendo el numero premiado.
