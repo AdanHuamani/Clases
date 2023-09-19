@@ -165,19 +165,125 @@ Existen 2 tipos de funciones.
    Tiene nombre seguido de parentesis ( ), dentro de las parentisis podremos pasarle que nesecita la funcion para ejecutarse.
    Esta es una funcion que nos sirve para mostrar datos por consola.
 
-     ### **Print:**
+     #### **Print:**
     Esta es una funbcion que nos sirve para mostrar el dato por consola.
     ```python
     print("Hola Chamo")
     ```
-    ### **Len:** 
+    #### **Len:** 
     Esta funcion nos permite saber la longitud de una lista o un string.
     ```python
     print(len([7,1,10,17]))
     ```
-    ### **Input:** 
+    #### **Input:** 
     Es una funcion que se detiene a esperar que el usuario. entre parentisis podremos escribir un mensaje que indique que accion realizara el usuario.
     ```python
     input("Ingresa tu nombre")
     ```
-2. Funciones creadas: 
+    #### **Max**: 
+    Esta funcion nos muestra el numero mayor de una lista.
+    ```python
+    Lista=[12,43,6,77,9,17,10]
+    numero_mayor=max(lista)
+    print(numero_mayor)
+    ```
+    #### **Min**: 
+    Esta funcion nos muestra el numero menor de una lista.
+    ```python
+    Lista=[43,54,65,87,10,7]
+    numero_menor=min(lista)
+    print(numero_menor)
+    ```
+    #### **int**: 
+    Funcion para convertir de un string a un numero entero
+    ```python
+    int("100") -> 100 -> entero
+    ```
+    #### **str**: 
+    Funcion para convertir un entero a un string.
+    ```python
+    str(100) -> "100" -> string
+    ```
+    #### **append**:
+    Funcion de python que nos permite agregar elementos al finmal de una lista.
+    ```python
+    lista=[15,32,10,7]
+    elemento=100
+    lista.append(elemento)
+    print(lista)
+    ```
+    #### **pop**: 
+    Funcion de python que nos permite eliminar los elementos que se encuentran al final de una lista.
+    ```python
+    lista=[10,7,17,47]
+    lista.pop()
+    print(lista)
+    ```
+    #### **insert**:
+    Funcion de python que nos permite agregar elementos en cualquier posicion de mi lista para eso se le tiene que pasar dos parametros, primero indicarle el indice y segundo el dato que se va agregar.
+    ```python
+    lista_nombres=["jory","nadine","bicho"]
+    lista_numbres.insert(1,"adan")
+    print(lista_nombres)
+    ```
+    #### **remove**: 
+    Funcion de python que nos permite eliminar elementos de cualquier posicion de una lista, esta funcion solo recibe elementos que deseamos eliminar.
+    ```python
+    lista=[4,5,6,7,8,9]
+    lista.remove(6)
+    print(lista)
+    ```
+    #### split: 
+    Funcion que nos permite dividir en una lista una cadena.
+    ```python
+    cadena="hola como estas"
+    lista=cadena.split()
+    print(lista)
+    url="www.golle.com/id=70133573"
+    id=url.split("=").pop()
+    print(id)
+    ```
+### 2. FUNCIONES CREADAS.
+Una funcion son miniprogramas tambien se le conoce como modulos o fragmentos de cidgo de uso exclusivo.
+### Funciones propias: 
+Pasos para crear una funcion propia.
+1. Hacer uso de la palabra resevada def.
+2. Definir un nombre de funcion que describa que tarea va a realizar.
+3. Establecer los paramtros que resivira la funcion entre parentisis ().
+4. Establecer que valor o dato va retornar mi funcion con la palabra reservada return.
+5. **Observación**: Tambien podemos hacer uso de la funcion print () para retornar un mensaje en nuestra funcion.
+Existen dos tipos de funciones los que no reciben ningun parametro y los que reciben parametros.
+```python
+def saludo():
+    print("hola este es un saludo")
+```
+- Como hacemos uso de la funcion?
+- Nombre de la funcion y perentisis.
+- Funcion con parametros.
+```python
+def mi_print(texto)
+print(texto)
+print("hola este es print de python")
+mi_print("hola este es mi print creado")
+```
+```python
+def suma(a+b)
+    total=a+b
+    return total
+mi_print(suma(10+7))
+```
++ Ejemplo: Para que se usa esta funcion. Para mostrar el valor maximo de una lista.
+  ```python
+  lista=[12,4,10,17,7]
+  mi_print(max(lista))
+  
+  def mi_max(lista):
+    numero_mayor=lista[0]
+    for numero in lista:
+        if numero > numero_mayor:
+            numero_mayor=numero
+    return numero_mayor
+mi_print(mi_max(lista))
+```
+
+
