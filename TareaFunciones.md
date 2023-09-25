@@ -52,4 +52,33 @@ Es un lenguaje de programación versátil y ampliamente utilizado, por lo que ha
 
 25. **print** (en el módulo **logging**): Para realizar un registro y depuración más avanzados.
 
-Ten en cuenta que esta lista no es exhaustiva, ya que Python tiene una amplia biblioteca estándar y hay muchas más funciones y métodos disponibles. La elección de qué funciones utilizar dependerá de tus necesidades específicas en un proyecto dado.
+## 2. Averiguar sobre entornos virtuales en python
+Los entornos virtuales en Python son una herramienta fundamental para gestionar las dependencias y las versiones de las bibliotecas utilizadas en diferentes proyectos de Python de manera aislada. Esto ayuda a evitar conflictos entre las dependencias de diferentes proyectos y permite que cada proyecto tenga su propio entorno de trabajo independiente.
+
+Existen varias herramientas para crear y gestionar entornos virtuales en Python, las más comunes son:
+
+1. **`venv` (módulo de la biblioteca estándar):** `venv` es una herramienta incluida en la biblioteca estándar de Python a partir de la versión 3.3. Para crear un entorno virtual con `venv`, puedes seguir los pasos que mencioné en mi respuesta anterior.
+
+2. **`virtualenv`:** `virtualenv` es una herramienta externa que puedes instalar usando `pip`. Proporciona funcionalidad similar a `venv`, pero es compatible con versiones anteriores de Python. Puedes crear un entorno virtual con `virtualenv` de la siguiente manera:
+
+   ```python
+   pip install virtualenv  # Si aún no está instalado
+   virtualenv nombre_del_entorno
+   source nombre_del_entorno/bin/activate  # En macOS y Linux
+   nombre_del_entorno\Scripts\activate  # En Windows
+   ```
+
+3. **`conda` (para gestión de entornos y paquetes):** Anaconda es una distribución de Python que incluye la herramienta `conda`, que es muy útil para crear y gestionar entornos virtuales, además de instalar paquetes. Puedes crear un entorno virtual con `conda` de la siguiente manera:
+
+   ```python
+   conda create --name nombre_del_entorno python=3.x
+   conda activate nombre_del_entorno
+   ```
+
+4. **`pipenv` (gestor de dependencias y entornos):** `pipenv` es una herramienta que combina la gestión de dependencias y la creación de entornos virtuales en un solo comando. Puedes usar `pipenv` de la siguiente manera:
+
+   ```python
+   pip install pipenv  # Si aún no está instalado
+   pipenv --python 3.x  # Crear un entorno virtual e indicar la versión de Python
+   pipenv shell  # Activar el entorno virtual
+   ```

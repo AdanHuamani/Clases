@@ -283,7 +283,25 @@ mi_print(suma(10+7))
         if numero > numero_mayor:
             numero_mayor=numero
     return numero_mayor
-mi_print(mi_max(lista))
+    mi_print(mi_max(lista))
+    ```
+### Funciones con muchos parametros:
+```python
+def funcion(*muchos_parametros):
+    total=0
+    for numero in muchos_parametros:
+        total=total+numero
+    return total
+print(funcion(43,17,7,10))
 ```
+```python
+def datos(*args)
+    nombre=args[0]
+    apellidos=args[1]
+    edad=args[2]
+    return f"mi nombre es,{nombre},{apellidos}y mi edad es,{edad}"
+print (datos("edwin","apellidos","50"))
+```
+
 
 
