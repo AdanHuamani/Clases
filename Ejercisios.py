@@ -103,3 +103,7 @@
 # cadena = input("Ingresa una cadena de caracteres: ")
 # resultado = contar_palabras(cadena)
 # print(resultado)
+
+## Crear un entorno virtual con venv de python e
+# instalar el framework django para la creación 
+# app web
