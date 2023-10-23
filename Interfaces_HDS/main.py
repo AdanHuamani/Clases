@@ -4,7 +4,7 @@ import tkinter as tk
 
 ventana = tk.Tk()
 def saludar():
-    label_saludo.config(text="¡Hola, David!")
+    label_saludo.config(text="¡Hola, Adan!")
 
 ventana.title("Bot")
 ventana.geometry("400x200")
