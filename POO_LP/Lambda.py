@@ -184,17 +184,66 @@ class Tienda_Comercial:
 
 # Crear una lista con 10 objetos de tiendas comerciales
 negocios = [
-    {"nombre": "Tienda 1", "categoria": "Abarrotes", "gerente": "Edwin", "ruc": "12345678901"},
-    {"nombre": "Tienda 2", "categoria": "Farmacia", "gerente": "China", "ruc": "23456789012"},
-    {"nombre": "Tienda 3", "categoria": "Bodega", "gerente": "Cristian", "ruc": "34567890123"},
-    {"nombre": "Tienda 4", "categoria": "Restaurantes", "gerente": "Nadine", "ruc": "45678901234"},
-    {"nombre": "Tienda 5", "categoria": "Abarrotes, Farmacia", "gerente": "Edwin", "ruc": "56789012345"},
-    {"nombre": "Tienda 6", "categoria": "Bodega, Restaurantes", "gerente": "China", "ruc": "67890123456"},
-    {"nombre": "Tienda 7", "categoria": "Farmacia, Bodega", "gerente": "Cristian", "ruc": "78901234567"},
-    {"nombre": "Tienda 8", "categoria": "Abarrotes, Restaurantes", "gerente": "Nadine", "ruc": "89012345678"},
-    {"nombre": "Tienda 9", "categoria": "Farmacia, Restaurantes", "gerente": "Edwin", "ruc": "90123456789"},
-    {"nombre": "Tienda 10", "categoria": "Abarrotes, Bodega", "gerente": "China", "ruc": "01234567890"}
-]
+    {"nombre": "Tienda 1", 
+     "categoria": "Abarrotes", 
+     "Horario": "8:00 AM - 5:00 PM",
+     "gerente": "Edwin", 
+     "ruc": "12345678901"},
+
+    {"nombre": "Tienda 2", 
+     "categoria": "Farmacia", 
+     "Horario": "8:00 AM - 5:00 PM",
+     "gerente": "China", 
+     "ruc": "23456789012"},
+
+    {"nombre": "Tienda 3", 
+     "categoria": "Bodega",
+     "Horario": "8:00 AM - 5:00 PM", 
+     "gerente": "Cristian", 
+     "ruc": "34567890123"},
+     
+    {"nombre": "Tienda 4", 
+     "categoria": "Restaurantes", 
+     "Horario": "8:00 AM - 5:00 PM",
+     "gerente": "Nadine", 
+     "ruc": "45678901234"},
+
+    {"nombre": "Tienda 5", 
+     "categoria": "Farmacia", 
+     "Horario": "8:00 AM - 5:00 PM",
+     "gerente": "Edwin", 
+     "ruc": "56789012345"},
+
+    {"nombre": "Tienda 6", 
+     "categoria": "Bodega, Restaurantes", 
+     "Horario": "8:00 AM - 5:00 PM",
+     "gerente": "China", 
+     "ruc": "67890123456"},
+
+    {"nombre": "Tienda 7", 
+     "categoria": "Farmacia, Bodega", 
+     "Horario": "8:00 AM - 5:00 PM",
+     "gerente": "Cristian", 
+     "ruc": "78901234567"},
+
+    {"nombre": "Tienda 8", 
+     "categoria": "Abarrotes, Restaurantes", 
+     "Horario": "8:00 AM - 5:00 PM",
+     "gerente": "Nadine", 
+     "ruc": "89012345678"},
+
+    {"nombre": "Tienda 9", 
+     "categoria": "Farmacia, Restaurantes", 
+     "Horario": "8:00 AM - 5:00 PM",
+     "gerente": "Edwin", 
+     "ruc": "90123456789"},
+
+    {"nombre": "Tienda 10", 
+     "categoria": "Abarrotes, Bodega", 
+     "Horario": "8:00 AM - 5:00 PM",
+     "gerente": "China", 
+     "ruc": "01234567890"}
+    ]
 
 gerente = Tienda_Comercial()
 
