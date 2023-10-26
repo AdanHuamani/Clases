@@ -1,27 +1,55 @@
 # Importar la base de datos
-from datetime import* # la variable usuarios de mi bd estará disponible en este archivo.
+ # la variable usuarios de mi bd estará disponible en este archivo.
+from datetime import*
 from bd import*
 # crear clase para usuario. Esta clase tendrá los siguientes metodos
 
 # Actualizar la edad del usuario.
 # Verificar si el usuario esta registrado o existe en este registro.
 # Validar usuario y password.
-def calcular_edad(fecha_nacimiento):
-    fecha_actual = datetime.now()
-    edad = fecha_actual.year - fecha_nacimiento.year
-    if fecha_nacimiento.month > fecha_actual.month or (fecha_nacimiento.month == fecha_actual.month and fecha_nacimiento.day > fecha_actual.day):
-        edad -= 1
-    return edad
+class Usuario:
 
-for usuario in obt: 
-    fecha_nacimiento = datetime.strptime(usuario["f_nacimiento"], "%d/%m/%Y")
-    usuario["edad"] = calcular_edad(fecha_nacimiento)
+    def __init__(self, DNI, Nombre, F_nacimiento, Edad,Usuario, Password):
+        self.DNI=DNI
+        self.Nombre=Nombre
+        self.F_nacimiento=F_nacimiento
+        self.Edad=Edad
+        self.Usuario=Usuario
+        self.Password=Password
 
-print(obt)
+    def mostrar_usuario(self, ide):
+        resultado=list(filter(lambda par:par['DNI']==ide,usuarios))
+        return f'''Aqui tienes los datos del usuario que buscaste:
+        {resultado}'''
+    
+    def agregar_edad(self, clave, valor):
+        for usuario in usuarios:
+            if usuario['DNI'] == self.DNI:
+                usuario[clave] = valor
+                return 'Se actualizó.'
+        return 'Usuario no encontrado.'
 
-dni_buscar= 12345678
-print(any(u["dni"]==dni_buscar for u in obt))
+    def verificar_usuario(self, usuario_buscar):
+        for usuario in usuarios:
+            if usuario['Usuario'] == usuario_buscar:
+                return 'Usuario registrado.'
+        return 'Usuario no encontrado en los registros.'
 
-dni_validar= 12345678
-password_validar="query1234"
-print(any(u["dni"]==dni_validar and ["password"]==password_validar for u in obt))
+    def validar_usuario_password(self, usuario_a_validar, password_a_validar):
+        for usuario in usuarios:
+            if usuario['Usuario'] == usuario_a_validar and usuario['Password'] == password_a_validar:
+                return 'Usuario y contraseña válidos.'
+        return 'Usuario o contraseña incorrectos.'
+
+actu=Usuario(74484162,"Adan","10/12/2003",None,"AHC","0717")
+print(actu.agregar_edad("edad", 20))
+print(actu.mostrar_usuario(74484162))
+
+usuario_a_buscar = "AHC"
+print(actu.verificar_usuario(usuario_a_buscar))
+print(actu.mostrar_usuario(74484162))
+
+usuario_a_validar = "AHC"
+password_a_validar = "0717"
+print(actu.validar_usuario_password(usuario_a_validar, password_a_validar))
+print(actu.mostrar_usuario(74484162))

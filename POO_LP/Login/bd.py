@@ -1,44 +1,44 @@
 ## Crear una lista de objetos
 ## Cada objeto tendra los datos de una persona
 ## Nombre, edad, Fecha de nacimiento, dni, Usuario, password
-obt=[{
-    "dni": 74374328,
-    "nombre":"Adan",
-    "f_nacimiento":"25/10/2003",
-    "edad":"",
-    "usuario":"Adan",
-    "password":"1234",
+usuarios=[{
+        "DNI": 74484162,
+        "Nombre": "Adan",
+        "F_nacimiento": "10/12/2003",
+        "Edad": "",
+        "Usuario":"AHC",
+        "Password":"0717"
     },
     {
-    "dni": 64345343,
-    "nombre":"Maximo",
-    "f_nacimiento":"15/11/2004",
-    "edad":"",
-    "usuario":"Max",
-    "password":"3444",
+        "DNI": 76543233,
+        "Nombre": "David",
+        "F_nacimiento": "02/09/2004",
+        "Edad": "",
+        "Usuario":"Asto",
+        "Password":"2343"
     },
     {
-    "dni": 74374328,
-    "nombre":"Cristiano",
-    "f_nacimiento":"10/10/2001",
-    "edad":"",
-    "usuario":"Bicho",
-    "password":"1441",
+        "DNI": 76544553,
+        "Nombre": "Max",
+        "F_nacimiento": "11/09/2005",
+        "Edad": "",
+        "Usuario":"Min",
+        "Password":"7533"
     },
     {
-    "dni": 74374328,
-    "nombre":"David",
-    "f_nacimiento":"05/07/2005",
-    "edad":"",
-    "usuario":"David",
-    "password":"9230",
+        "DNI": 65434322,
+        "Nombre": "Angel",
+        "F_nacimiento": "12/30/12",
+        "Edad": "",
+        "Usuario":"Angel A",
+        "Password":"3432"
     },
     {
-    "dni": 74374328,
-    "nombre":"Ronaldo",
-    "f_nacimiento":"07/01/2000",
-    "edad":"",
-    "usuario":"siuuu",
-    "password":"1223",
-    }
-    ]
+        "DNI": 74345676,
+        "Nombre": "Yoel",
+        "F_nacimiento": "17/02/2008",
+        "Edad": "",
+        "Usuario":"Yoel H",
+        "Password":"2117"
+    },
+]
