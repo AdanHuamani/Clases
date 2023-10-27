@@ -58,204 +58,241 @@
 ## Agregar un codigo para actualizar tienda.
 ## Agregar codigo para actualizar horario de atencion.
 # class Tienda_Comercial:
-#     def tienda_gerente(self, bd_negocios, nombre_gerente):
-#         respuesta = list(filter(lambda el: el["gerente"] == nombre_gerente, bd_negocios))
-#         return respuesta
-    
-#     def tienda_mas_categorias(self, bd_negocios):
-#         negocios_mas_categorias = list(filter(lambda el: len(el["categoria"].split(", ")) > 2, bd_negocios))
-#         return negocios_mas_categorias
-    
-#     def ruc_nombre(self, bd_negocios):
-#         nombre_ruc = [(el["nombre"], el["ruc"]) for el in bd_negocios]
-#         return nombre_ruc
-    
-#     def mostrar_todo(self, bd_negocios):
-#         for el in bd_negocios:
-#             print("Nombre:", el["nombre"])
-#             print("Categoría:", el["categoria"])
-#             print("Gerente:", el["gerente"])
-#             print("RUC:", el["ruc"])
-#             print("----------------------")
-    
-#     def eliminar_tienda(self, bd_negocios, nombre_tienda):
-#         bd_negocios = list(filter(lambda el: el["nombre"] != nombre_tienda, bd_negocios))
-#         return bd_negocios
-    
-#     def actualizar_tienda(self, bd_negocios, nombre_tienda, nueva_categoria, nuevo_gerente, nuevo_ruc):
-#         for el in bd_negocios:
-#             if el["nombre"] == nombre_tienda:
-#                 el["categoria"] = nueva_categoria
-#                 el["gerente"] = nuevo_gerente
-#                 el["ruc"] = nuevo_ruc
-#         return bd_negocios
-
-# # Crear una lista con 10 objetos de tiendas comerciales
 # negocios = [
-#     {"nombre": "Tienda 1", "categoria": "Abarrotes", "gerente": "Edwin", "ruc": "12345678901"},
-#     {"nombre": "Tienda 2", "categoria": "Farmacia", "gerente": "China", "ruc": "23456789012"},
-#     {"nombre": "Tienda 3", "categoria": "Bodega", "gerente": "Cristian", "ruc": "34567890123"},
-#     {"nombre": "Tienda 4", "categoria": "Restaurantes", "gerente": "Nadine", "ruc": "45678901234"},
-#     {"nombre": "Tienda 5", "categoria": "Abarrotes, Farmacia", "gerente": "Edwin", "ruc": "56789012345"},
-#     {"nombre": "Tienda 6", "categoria": "Bodega, Restaurantes", "gerente": "China", "ruc": "67890123456"},
-#     {"nombre": "Tienda 7", "categoria": "Farmacia, Bodega", "gerente": "Cristian", "ruc": "78901234567"},
-#     {"nombre": "Tienda 8", "categoria": "Abarrotes, Restaurantes", "gerente": "Nadine", "ruc": "89012345678"},
-#     {"nombre": "Tienda 9", "categoria": "Farmacia, Restaurantes", "gerente": "Edwin", "ruc": "90123456789"},
-#     {"nombre": "Tienda 10", "categoria": "Abarrotes, Bodega", "gerente": "China", "ruc": "01234567890"}
-# ]
+#     {"nombre": "Tienda 1", 
+#      "categoria": "Abarrotes", 
+#      "Horario": "8:00 AM - 5:00 PM",
+#      "gerente": "Edwin", 
+#      "ruc": "12345678901"},
 
-# gerente = Tienda_Comercial()
+#     {"nombre": "Tienda 2", 
+#      "categoria": "Farmacia", 
+#      "Horario": "8:00 AM - 5:00 PM",
+#      "gerente": "China", 
+#      "ruc": "23456789012"},
 
-# # Ejemplo de uso de los métodos de la clase
-# print("Tiendas del gerente China:")
-# tiendas_china = gerente.tienda_gerente(negocios, "China")
-# for tienda in tiendas_china:
-#     print(tienda["nombre"])
+#     {"nombre": "Tienda 3", 
+#      "categoria": "Bodega",
+#      "Horario": "8:00 AM - 5:00 PM", 
+#      "gerente": "Cristian", 
+#      "ruc": "34567890123"},
+     
+#     {"nombre": "Tienda 4", 
+#      "categoria": "Restaurantes", 
+#      "Horario": "8:00 AM - 5:00 PM",
+#      "gerente": "Nadine", 
+#      "ruc": "45678901234"},
 
-# print("\nNegocios con más de dos categorías:")
-# negocios_mas_categorias = gerente.tienda_mas_categorias(negocios)
-# for negocio in negocios_mas_categorias:
-#     print(negocio["nombre"])
+#     {"nombre": "Tienda 5", 
+#      "categoria": "Farmacia", 
+#      "Horario": "8:00 AM - 5:00 PM",
+#      "gerente": "Edwin", 
+#      "ruc": "56789012345"},
 
-# print("\nNombre y RUC de las tiendas:")
-# nombre_ruc = gerente.ruc_nombre(negocios)
-# for tienda in nombre_ruc:
-#     print(f"Nombre: {tienda[0]}, RUC: {tienda[1]}")
+#     {"nombre": "Tienda 6", 
+#      "categoria": "Bodega, Restaurantes", 
+#      "Horario": "8:00 AM - 5:00 PM",
+#      "gerente": "China", 
+#      "ruc": "67890123456"},
 
-# print("\nMostrar todos los datos de las tiendas:")
-# gerente.mostrar_todo(negocios)
+#     {"nombre": "Tienda 7", 
+#      "categoria": "Farmacia, Bodega", 
+#      "Horario": "8:00 AM - 5:00 PM",
+#      "gerente": "Cristian", 
+#      "ruc": "78901234567"},
 
-# print("\nEliminar una tienda:")
-# negocios = gerente.eliminar_tienda(negocios, "Tienda 3")
-# gerente.mostrar_todo(negocios)
+#     {"nombre": "Tienda 8", 
+#      "categoria": "Abarrotes, Restaurantes", 
+#      "Horario": "8:00 AM - 5:00 PM",
+#      "gerente": "Nadine", 
+#      "ruc": "89012345678"},
 
-# print("\nActualizar una tienda:")
-# negocios = gerente.actualizar_tienda(negocios, "Tienda 1", "Supermercado", "Pedro", "09876543210")
-# gerente.mostrar_todo(negocios)
+#     {"nombre": "Tienda 9", 
+#      "categoria": "Farmacia, Restaurantes", 
+#      "Horario": "8:00 AM - 5:00 PM",
+#      "gerente": "Edwin", 
+#      "ruc": "90123456789"},
 
-###########
-class Tienda_Comercial:
-    def tienda_gerente(self, bd_negocios, nombre_gerente):
-        respuesta = list(filter(lambda el: el["gerente"] == nombre_gerente, bd_negocios))
-        return respuesta
+#     {"nombre": "Tienda 10", 
+#      "categoria": "Abarrotes, Bodega", 
+#      "Horario": "8:00 AM - 5:00 PM",
+#      "gerente": "China", 
+#      "ruc": "01234567890"}
+#     ]
+# class Tiendas_comerciales:
+
+#     def __init__(self,ruc,nombre, categoria,Horario,gerente,):
+#         self.id=id
+#         self.ruc=ruc
+#         self.nombre=nombre
+#         self.categoria=categoria
+#         self.Horario=Horario
+#         self.gerente=gerente
+
+
+#     def tienda_gerente(self,bd_negocios,nombre_gerente):
+#         respuesta=list(filter(lambda el:el["gerente"]==nombre_gerente,bd_negocios))
+#         return respuesta
+
+#     def tiendas_mas_categorias(self,bd_negocios):
+#         respuesta1=list(filter(lambda xd:len(xd["categoria"])>2,bd_negocios))
+#         return respuesta1
     
-    def tienda_mas_categorias(self, bd_negocios):
-        negocios_mas_categorias = list(filter(lambda el: len(el["categoria"].split(", ")) > 2, bd_negocios))
-        return negocios_mas_categorias
+#     def ruc_nombre(self,bd_negocios):
+#         respuesta2=list(map(lambda par:{"ruc":par["ruc"],"nombre" :par["nombre"]},bd_negocios))
+#         return respuesta2
     
-    def ruc_nombre(self, bd_negocios):
-        nombre_ruc = [(el["nombre"], el["ruc"]) for el in bd_negocios]
-        return nombre_ruc
+#     def eliminar_negocio(self,bd_negocios,ruc):
+#         respuesta=list(filter(lambda el:el["ruc"]!=ruc,bd_negocios))
+#         return respuesta
+#     ## tarea
+#     def actualizar_negocio(self,id,clave,valor):
+#         ol=valor
+#         actualizar_negocio=list(filter(lambda obj:obj[clave]==id,negocios))[0].update({clave:valor}) 
+#         return 'se actualizo la tienda'
+#     ## otro metodo para crear un nuevo producto
+#     def registrar_negocio(self):
+#         nuevo_id=len(negocios)+1
+#         negocio_nuevo={
+#         'id':nuevo_id,
+#         'ruc':self.ruc,
+#         'nombre':self.nombre,
+#         'categoria':self.categoria,
+#         'Horario':self.Horario,
+#         'gerente':self.gerente
+#     }
+#         registro_negocio=negocios.append(negocio_nuevo)
+#         return 'producto registrado exitosamente'
     
-    def mostrar_todo(self, bd_negocios):
-        for el in bd_negocios:
-            print("Nombre:", el["nombre"])
-            print("Categoría:", el["categoria"])
-            print("Gerente:", el["gerente"])
-            print("RUC:", el["ruc"])
-            print("----------------------")
-    
-    def eliminar_tienda(self, bd_negocios, nombre_tienda):
-        bd_negocios = list(filter(lambda el: el["nombre"] != nombre_tienda, bd_negocios))
-        return bd_negocios
-    
-    def actualizar_tienda(self, bd_negocios, nombre_tienda, nueva_categoria, nuevo_gerente, nuevo_ruc):
-        for el in bd_negocios:
-            if el["nombre"] == nombre_tienda:
-                el["categoria"] = nueva_categoria
-                el["gerente"] = nuevo_gerente
-                el["ruc"] = nuevo_ruc
-        return bd_negocios
-    
-    def crear_producto(self, bd_negocios, nombre_tienda, nuevo_producto):
-        for el in bd_negocios:
-            if el["nombre"] == nombre_tienda:
-                if "productos" not in el:
-                    el["productos"] = []
-                el["productos"].append(nuevo_producto)
-        return bd_negocios
-    
-    def actualizar_horario(self, bd_negocios, nombre_tienda, nuevo_horario):
-        for el in bd_negocios:
-            if el["nombre"] == nombre_tienda:
-                el["horario"] = nuevo_horario
-        return bd_negocios
+#     def mostrar_negocio(self, ide):
+#         g=list(filter(lambda par:par['id']==ide,negocios))
+#         return f'''Aqui tienes informacion de la tienda que buscaste:
+#         .................................................................................................................................................................................................................... 
+#         {g}'''
 
+#     ## otro metodo para actualizar el horario de atencion
+#     def actualizar_horario(self, id, clave, valor):
+#         negocios[id-1][clave]=valor
+#         #actu_hora=list(filter(lambda obj:obj[clave]==dato,negocios))[0].update({clave:valor}) 
+#         return 'se actualizo el horario'
 
-# Crear una lista con 10 objetos de tiendas comerciales
+# actu=Tiendas_comerciales(56789012345,'Areola','bodega',{"dia":"7am-12m","tarde":"2pm-8pm"},'edwin')
+# print(actu.actualizar_negocio('xd','nombre','jijijja'))
+
+# print(actu.registrar_negocio())
+# print(actu.mostrar_negocio(11))
+
+# print(actu.actualizar_horario(1,'horario_atencion',{'dia':'7am-12pm','tarde':'3pm-9pm'}))
+# print(actu.mostrar_negocio(2))
+
 negocios = [
     {"nombre": "Tienda 1", 
      "categoria": "Abarrotes", 
      "Horario": "8:00 AM - 5:00 PM",
      "gerente": "Edwin", 
      "ruc": "12345678901"},
-
     {"nombre": "Tienda 2", 
      "categoria": "Farmacia", 
      "Horario": "8:00 AM - 5:00 PM",
      "gerente": "China", 
      "ruc": "23456789012"},
-
     {"nombre": "Tienda 3", 
      "categoria": "Bodega",
      "Horario": "8:00 AM - 5:00 PM", 
      "gerente": "Cristian", 
      "ruc": "34567890123"},
-     
     {"nombre": "Tienda 4", 
      "categoria": "Restaurantes", 
      "Horario": "8:00 AM - 5:00 PM",
      "gerente": "Nadine", 
      "ruc": "45678901234"},
-
     {"nombre": "Tienda 5", 
      "categoria": "Farmacia", 
      "Horario": "8:00 AM - 5:00 PM",
      "gerente": "Edwin", 
      "ruc": "56789012345"},
-
     {"nombre": "Tienda 6", 
      "categoria": "Bodega, Restaurantes", 
      "Horario": "8:00 AM - 5:00 PM",
      "gerente": "China", 
      "ruc": "67890123456"},
-
     {"nombre": "Tienda 7", 
      "categoria": "Farmacia, Bodega", 
      "Horario": "8:00 AM - 5:00 PM",
      "gerente": "Cristian", 
      "ruc": "78901234567"},
-
     {"nombre": "Tienda 8", 
      "categoria": "Abarrotes, Restaurantes", 
      "Horario": "8:00 AM - 5:00 PM",
      "gerente": "Nadine", 
      "ruc": "89012345678"},
-
     {"nombre": "Tienda 9", 
      "categoria": "Farmacia, Restaurantes", 
      "Horario": "8:00 AM - 5:00 PM",
      "gerente": "Edwin", 
      "ruc": "90123456789"},
-
     {"nombre": "Tienda 10", 
      "categoria": "Abarrotes, Bodega", 
      "Horario": "8:00 AM - 5:00 PM",
      "gerente": "China", 
      "ruc": "01234567890"}
-    ]
+]
 
-gerente = Tienda_Comercial()
+class Tiendas_comerciales:
+    def __init__(self, ruc, nombre, categoria, horario, gerente):
+        self.ruc = ruc
+        self.nombre = nombre
+        self.categoria = categoria
+        self.horario = horario
+        self.gerente = gerente
 
-# Crear un nuevo producto en una tienda específica
-negocios = gerente.crear_producto(negocios, "Tienda 1", "Nuevo producto 1")
-negocios = gerente.crear_producto(negocios, "Tienda 1", "Nuevo producto 2")
+    def tienda_gerente(self, bd_negocios, nombre_gerente):
+        respuesta = list(filter(lambda el: el["gerente"] == nombre_gerente, bd_negocios))
+        return respuesta
 
-# Actualizar una tienda
-negocios = gerente.actualizar_tienda(negocios, "Tienda 2", "Nueva categoría", "Nuevo gerente", "09876543210")
+    def tiendas_mas_categorias(self, bd_negocios):
+        respuesta1 = list(filter(lambda xd: len(xd["categoria"]) > 2, bd_negocios))
+        return respuesta1
 
-# Actualizar el horario de atención de una tienda
-negocios = gerente.actualizar_horario(negocios, "Tienda 3", "8:00 AM - 6:00 PM")
+    def ruc_nombre(self, bd_negocios):
+        respuesta2 = list(map(lambda par: {"ruc": par["ruc"], "nombre": par["nombre"]}, bd_negocios))
+        return respuesta2
 
-# Mostrar todos los datos actualizados de las tiendas
-gerente.mostrar_todo(negocios)
+    def eliminar_negocio(self, bd_negocios, ruc):
+        respuesta = list(filter(lambda el: el["ruc"] != ruc, bd_negocios))
+        return respuesta
+
+    def actualizar_negocio(self, id, clave, valor):
+        negocios[id - 1][clave] = valor
+        return 'Se actualizó la tienda'
+
+    def registrar_negocio(self):
+        nuevo_id = len(negocios) + 1
+        negocio_nuevo = {
+            'id': nuevo_id,
+            'ruc': self.ruc,
+            'nombre': self.nombre,
+            'categoria': self.categoria,
+            'Horario': self.horario,
+            'gerente': self.gerente
+        }
+        negocios.append(negocio_nuevo)
+        return 'Producto registrado exitosamente'
+
+    def mostrar_negocio(self, ide):
+        g = list(filter(lambda par: par['id'] == ide, negocios))
+        return f'''Aquí tienes información de la tienda que buscaste:
+        .................................................................................................................................................................................................................... 
+        {g}'''
+
+    def actualizar_horario(self, id, clave, valor):
+        negocios[id - 1][clave] = valor
+        return 'Se actualizó el horario'
+
+
+actu = Tiendas_comerciales(56789012345, 'Areola', 'bodega', {"dia": "7am-12m", "tarde": "2pm-8pm"}, 'edwin')
+print(actu.actualizar_negocio('Ropa', 'Adan', 'David'))
+print(actu.registrar_negocio())
+print(actu.mostrar_negocio(11))
+print(actu.actualizar_horario(1, 'Horario', {'dia': '7am-12pm', 'tarde': '3pm-9pm'}))
+print(actu.mostrar_negocio(2))

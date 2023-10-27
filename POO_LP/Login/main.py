@@ -8,7 +8,6 @@ from bd import*
 # Verificar si el usuario esta registrado o existe en este registro.
 # Validar usuario y password.
 class Usuario:
-
     def __init__(self, DNI, Nombre, F_nacimiento, Edad,Usuario, Password):
         self.DNI=DNI
         self.Nombre=Nombre
