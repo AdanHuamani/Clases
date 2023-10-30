@@ -15,8 +15,7 @@ def limpiar():
     num_1.delete(0,END)
     num_2.delete(0,END)
     total.delete(0,END)
-
-
+# Ventana
 ventana=Tk()
 num_1=DoubleVar()
 num_2=DoubleVar()
@@ -46,7 +45,7 @@ boton_calcular=Button(ventana,text="calcular",command=calcular)
 boton_calcular.place(x=60,y=180)
 boton_limpiar=Button(ventana,text="Limpiar",command=limpiar)
 boton_limpiar.place(x=140,y=180)
-
+# RADIO BOTONES
 radio1=Radiobutton(ventana,text="Suma",value=1,variable=opcion)
 radio1.place(y=40,x=190)
 
