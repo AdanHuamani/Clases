@@ -17,7 +17,7 @@ from funciones import*
 # Configuracion de 
 root=Tk()
 root.title("Calculadora")
-root.geometry("330x300")
+root.geometry("320x320")
 root.resizable(0,0)
 ####
 fuente_general=("arial",8,"bold")
@@ -48,7 +48,8 @@ boton_2=Button(root,text="2",
                fg="red", #Para color de texto
                borderwidth=0,
                cursor="hand1",
-               font=fuente_general).grid(row=2,column=1,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
+               font=fuente_general,
+               command=lambda:enviar_boton(2,pantalla)).grid(row=2,column=1,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
 
 boton_3=Button(root,text="3",
                width=9, #Ancho
@@ -57,7 +58,8 @@ boton_3=Button(root,text="3",
                fg="red", #Para color de texto
                borderwidth=0,
                cursor="hand1",
-               font=fuente_general).grid(row=3,column=1,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
+               font=fuente_general,
+               command=lambda:enviar_boton(3,pantalla)).grid(row=3,column=1,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
 
 boton_4=Button(root,text="4",
                width=9, #Ancho
@@ -66,7 +68,8 @@ boton_4=Button(root,text="4",
                fg="red", #Para color de texto
                borderwidth=0,
                cursor="hand1",
-               font=fuente_general).grid(row=1,column=2,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
+               font=fuente_general,
+               command=lambda:enviar_boton(4,pantalla)).grid(row=1,column=2,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
 
 boton_5=Button(root,text="5",
                width=9, #Ancho
@@ -75,7 +78,8 @@ boton_5=Button(root,text="5",
                fg="red", #Para color de texto
                borderwidth=0,
                cursor="hand1",
-               font=fuente_general).grid(row=2,column=2,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
+               font=fuente_general,
+               command=lambda:enviar_boton(5,pantalla)).grid(row=2,column=2,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
 
 boton_6=Button(root,text="6",
                width=9, #Ancho
@@ -84,7 +88,8 @@ boton_6=Button(root,text="6",
                fg="red", #Para color de texto
                borderwidth=0,
                cursor="hand1",
-               font=fuente_general).grid(row=3,column=2,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
+               font=fuente_general,
+               command=lambda:enviar_boton(6,pantalla)).grid(row=3,column=2,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
 
 boton_7=Button(root,text="7",
                width=9, #Ancho
@@ -93,7 +98,8 @@ boton_7=Button(root,text="7",
                fg="red", #Para color de texto
                borderwidth=0,
                cursor="hand1",
-               font=fuente_general).grid(row=1,column=3,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
+               font=fuente_general,
+               command=lambda:enviar_boton(7,pantalla)).grid(row=1,column=3,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
 
 boton_8=Button(root,text="8",
                width=9, #Ancho
@@ -102,7 +108,8 @@ boton_8=Button(root,text="8",
                fg="red", #Para color de texto
                borderwidth=0,
                cursor="hand1",
-               font=fuente_general).grid(row=2,column=3,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
+               font=fuente_general,
+               command=lambda:enviar_boton(8,pantalla)).grid(row=2,column=3,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
 
 boton_9=Button(root,text="9",
                width=9, #Ancho
@@ -111,7 +118,8 @@ boton_9=Button(root,text="9",
                fg="red", #Para color de texto
                borderwidth=0,
                cursor="hand1",
-               font=fuente_general).grid(row=3,column=3,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
+               font=fuente_general,
+               command=lambda:enviar_boton(9,pantalla)).grid(row=3,column=3,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
 
 boton_0=Button(root,text="0",
                width=9, #Ancho
@@ -120,7 +128,8 @@ boton_0=Button(root,text="0",
                fg="red", #Para color de texto
                borderwidth=0,
                cursor="hand1",
-               font=fuente_general).grid(row=4,column=2,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
+               font=fuente_general,
+               command=lambda:enviar_boton(0,pantalla)).grid(row=4,column=2,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
 #Boton Igual
 boton_igual=Button(root,text="=",
                width=9, #Ancho
@@ -129,7 +138,8 @@ boton_igual=Button(root,text="=",
                fg="red", #Para color de texto
                borderwidth=0,
                cursor="hand1",
-               font=fuente_general).grid(row=4,column=1,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
+               font=fuente_general,
+               command=lambda:igual(pantalla)).grid(row=4,column=1,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
 #Boton del punto
 boton_punto=Button(root,text=".",
                width=9, #Ancho
@@ -138,7 +148,8 @@ boton_punto=Button(root,text=".",
                fg="red", #Para color de texto
                borderwidth=0,
                cursor="hand1",
-               font=fuente_general).grid(row=4,column=3,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
+               font=fuente_general,
+               command=lambda:enviar_boton(".",pantalla)).grid(row=4,column=3,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
 #Bontones de operaciones:
 boton_Mas=Button(root,text="+",
                width=9, #Ancho
@@ -147,7 +158,8 @@ boton_Mas=Button(root,text="+",
                fg="red", #Para color de texto
                borderwidth=0,
                cursor="hand1",
-               font=fuente_general).grid(row=1,column=4,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
+               font=fuente_general,
+               command=lambda:operacion("+",pantalla)).grid(row=1,column=4,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
 boton_menos=Button(root,text="-",
                width=9, #Ancho
                height=3, #Altura
@@ -155,7 +167,8 @@ boton_menos=Button(root,text="-",
                fg="red", #Para color de texto
                borderwidth=0,
                cursor="hand1",
-               font=fuente_general).grid(row=2,column=4,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
+               font=fuente_general,
+               command=lambda:operacion("-",pantalla)).grid(row=2,column=4,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
 boton_Mutiplicacion=Button(root,text="*",
                width=9, #Ancho
                height=3, #Altura
@@ -163,7 +176,8 @@ boton_Mutiplicacion=Button(root,text="*",
                fg="red", #Para color de texto
                borderwidth=0,
                cursor="hand1",
-               font=fuente_general).grid(row=3,column=4,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
+               font=fuente_general,
+               command=lambda:operacion("*",pantalla)).grid(row=3,column=4,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
 boton_division=Button(root,text="/",
                width=9, #Ancho
                height=3, #Altura
@@ -171,6 +185,14 @@ boton_division=Button(root,text="/",
                fg="red", #Para color de texto
                borderwidth=0,
                cursor="hand1",
-               font=fuente_general).grid(row=4,column=4,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
-
+               font=fuente_general,
+               command=lambda:operacion("/",pantalla)).grid(row=4,column=4,padx=1,pady=1) #Sirve para cambiar el estilo del mouse.
+boton_Limpiar=Button(root,text="limpiar",
+                width=40,
+                height=3,
+                bg="deep sky blue",
+                fg="black",
+                borderwidth=0,
+                cursor="hand2",
+                command=lambda:limpiar(pantalla)).grid(row=5,column=1,columnspan=4,padx=1,pady=1)
 root.mainloop()
