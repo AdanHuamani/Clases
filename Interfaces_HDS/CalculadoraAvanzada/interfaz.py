@@ -1,12 +1,14 @@
 from tkinter import*
 from tkinter import font
 import config as cons
+from funciones import*
 
 class InterfazCalculadora(Tk):
     def __init__(self):
         super().__init__()
         self.configura_ventana()
         self.construir_widget()
+        self.boton_cambio_tema()
     def configura_ventana(self):
         self.title("calculadora avanzada")
         #color
@@ -47,11 +49,16 @@ class InterfazCalculadora(Tk):
                 color_fondo=cons.COLOR_BOTONES_NEGRO
                 boton_font=robot_font
             if boton== "=":
-                Button(self,text=boton,width=11,height=2,bg=color_fondo,fg=cons.COLOR_TEXTO_NEGRO,relief=FLAT,font=boton_font,padx=5,pady=5,bd=0,borderwidth=0,highlightthickness=0,overrelief='flat').grid(row=row_ini,column=col_ini,columnspan=2,pady=5)
+                Button(self,command=lambda b=boton:enviar_boton(self,b),text=boton,width=11,height=2,bg=color_fondo,fg=cons.COLOR_TEXTO_NEGRO,relief=FLAT,font=boton_font,padx=5,pady=5,bd=0,borderwidth=0,highlightthickness=0,overrelief='flat').grid(row=row_ini,column=col_ini,columnspan=2,pady=5)
                 col_ini += 1
             else:
-                Button(self,text=boton,width=5,height=2,bg=color_fondo,fg=cons.COLOR_TEXTO_NEGRO,relief=FLAT,font=boton_font,padx=5,pady=5,bd=0,borderwidth=0,highlightthickness=0,overrelief='flat').grid(row=row_ini,column=col_ini,pady=5)
+                Button(self,command=lambda b=boton:enviar_boton(self,b),text=boton,width=5,height=2,bg=color_fondo,fg=cons.COLOR_TEXTO_NEGRO,relief=FLAT,font=boton_font,padx=5,pady=5,bd=0,borderwidth=0,highlightthickness=0,overrelief='flat').grid(row=row_ini,column=col_ini,pady=5)
                 col_ini += 1
             if col_ini>3:
                 col_ini=0
                 row_ini += 1
+    def boton_cambio_tema(self):
+        self.tema_oscuro=True
+        font_icono=font.Font(family="FontAwesone",size=12)
+        self.boton_tema=Button(self,text="Modo Oscuro",width=13,font=font_icono,bd=0,borderwidth=0,highlightthickness=0,relief=FLAT,bg=cons.COLOR_BOTONES_ESPECIAL_LIGHT,command=lambda:cambio_tema(self,cons),bg=cons.COLOR_BOTONES_ESPECIAL_LIGHT)
+        self.boton_tema.grid(row=0,column=0,columnspan=2,padx=0,pady=0,sticky="nw")

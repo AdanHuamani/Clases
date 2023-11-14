@@ -77,3 +77,8 @@ class trabajador(Persona):
         self.profesion=profesion
     def trabajar(self):
         return "Estoy trabajando en ISTPJMA"
+jhona=Persona("jhonatan henry","masculino",18,71458988,"Arquitectura")
+print(f"[bold blue]"+jhona.habla('hola causa'))
+print("[bold blue]"+jhona.come("cebiche"))
+print("[bold blue]"+jhona.estudiar())
+print("[bold blue]"+jhona.nombre)
